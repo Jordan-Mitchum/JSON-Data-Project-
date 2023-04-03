@@ -1,0 +1,18 @@
+{% extends "plan.html" %}
+
+{% set active_page = "about" %}
+
+{% block title %}About the Data{% endblock %}
+
+{% block heading %}About the Ads Data{% endblock %}
+
+{% block body %}
+<p id = "about">
+    The data used in this web app is from the CORGIS Dataset Project and can be found 
+    <a href="https://corgis-edu.github.io/corgis/json/super_bowl_ads/">here</a>.  
+    The data contain the information of the Superbowl ads. It has data from the years 2000-2020.<br>
+    The data set was created by a group of people named FiveThirtyEight who went through and analyzed and categorized the ads and then definded them in based on characteristics and criteria.<br>
+    One bit of information used reports for each ad is the content it used.  The content used is shown in the data set by its describing fetures.<br>  
+    For example, if an ad used comedy or other typs of way to appeal to the audience. Each way of entertainment is put into its own subcategroy. This just shows a little of what the data set shows. 
+</p>
+{% endblock %}

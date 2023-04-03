@@ -1,0 +1,14 @@
+{% extends "category.html" %}
+
+{% set active_page = "category" %}
+
+{% block title %}Category Popularity by Year{% endblock %}
+
+{% block heading %}Category Populairty by Year{% endblock %}
+
+{% block body %}
+{{ super() }}
+<br>
+<h3>Most popular category in {{ Year }} was {{mostUsed}}.</h3>
+<p>{{ mostUsed }} was used {{ used }} times.</p>
+{% endblock %}

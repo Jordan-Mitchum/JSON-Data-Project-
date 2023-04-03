@@ -1,0 +1,56 @@
+{% extends "plan.html" %}
+
+{% set active_page = "Likes" %}
+
+{% block title %}Likes{% endblock %}
+
+{% block heading %}Likes on Ads in 2020{% endblock %}
+
+
+{% block body %}
+<script>
+window.onload = function () {
+	
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	
+	title:{
+		text:"Amount of Likes on Ads in 2020"
+	},
+	axisX:{
+		interval: 1
+	},
+	axisY2:{
+		interlacedColor: "rgba(252, 111, 116)",
+		gridColor: "rgba(120, 119, 116)",
+		title: "Likes"
+	},
+	data: [{
+		type: "bar",
+		name: "companies",
+		axisYType: "secondary",
+		color: "#150791",
+		dataPoints: [
+            { y: 10717, label: "Dortitos" },
+			{ y: 1470, label: "Coca-Cola" },
+            { y: 485, label: "Bud Light" },
+			{ y: 342, label: "Hynudai" },
+			{ y: 146, label: "Pepsi" },
+            { y: 115, label: "Toyota" },
+			{ y: 78, label: "Kia" },
+			{ y: 7, label: "Budwiser" },
+		]
+	}]
+});
+chart.render();
+ 
+}             
+</script>      
+   
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>   
+<br><br> 
+<p id="likes1">To make sure all of the data was shown I removed the NFL's Ad data but in 2020 their ad had 175,429 likes. All of the information on the likes was gotten from YouTube</p> 
+<br>
+<img id="likes" src="/static/likes.png" alt="Thumbs up" 
+{% endblock %} 

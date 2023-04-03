@@ -1,0 +1,20 @@
+{% extends "plan.html" %}
+
+{% set active_page = "popularity" %}
+
+{% block title %}Ad Popularity by Year{% endblock %}
+
+{% block heading %}Ad Populairty by Year{% endblock %}
+
+{% block body %}
+<form action="/popularity_response">
+  <select name="year">
+    {{ options }}
+  </select>
+  <br><br>
+  <input type="submit">
+</form>
+<br>
+{% if not mostViewed %} <img id="pop" src="/static/Popular.png" alt="Star" {% endif %}
+{% endblock %}
+    

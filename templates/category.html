@@ -1,0 +1,18 @@
+{% extends "plan.html" %}
+
+{% set active_page = "category" %}
+
+{% block title %}Category{% endblock %}
+
+{% block heading %}Category Populairty by Year{% endblock %}
+
+{% block body %}
+<form action="/category_response">
+  <select name="year">
+    {{ options }}
+  </select>
+  <br><br>
+  <input type="submit">
+</form>
+{% if not mostUsed %} <img id="cate" src="/static/categories.png" alt="Categories" {% endif %}    
+{% endblock %}

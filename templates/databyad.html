@@ -1,0 +1,18 @@
+{% extends "plan.html" %}
+
+{% set active_page = "databyad" %}
+
+{% block title %}Data by Show{% endblock %}
+
+{% block heading %}Data by Ad{% endblock %}
+
+{% block body %}
+<h2>Select a show</h2>
+<form action="/databyad">
+  <select name="Ad">
+    {{ options }}
+  </select>
+  <br><br>
+  <input type="submit">
+</form>
+{% endblock %}
